@@ -1,0 +1,10 @@
+---
+students:
+    - name: maheshwara
+      age: 33
+      gender: male
+      address: 
+        - city: bangalore
+          street: nagarbhavi
+          main: 11th main
+          
