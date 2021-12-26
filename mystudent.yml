@@ -7,4 +7,11 @@ students:
         - city: bangalore
           street: nagarbhavi
           main: 11th main
+    - name: Ramesh
+      age: 36
+      gender: male
+      address:
+        - city: bangalore
+          street: vijayanagar
+          main: 12th main
           
