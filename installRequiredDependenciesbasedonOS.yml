@@ -1,0 +1,30 @@
+---
+- hosts: all
+  become: yes
+  gather_facts: yes
+  tasks: 
+    - name: Install git 
+      apt:
+         name: git 
+         state: present
+      when: ansible_os_family == "Debian" 
+   
+    - name: Install tree
+      apt:
+        name: tree
+        state: present
+      when: ansible_os_family == "Linux" 
+
+    - name: Install wget 
+      apt: 
+        name: wget
+        state: present
+      when: ansible_os_family == "Linux" 
+
+
+    - name : Install apache2
+      apt:
+        name: apache2
+        state: present
+      when: ansible_os_family == "Debian" 
+
