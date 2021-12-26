@@ -4,5 +4,5 @@
   tasks: 
     - name: Install git 
       apt:
-        - name: git 
-          status: present
+         name: git 
+         status: present
