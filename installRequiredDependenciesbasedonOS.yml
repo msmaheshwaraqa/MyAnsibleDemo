@@ -20,13 +20,13 @@
 
     - name : Install apache2 on ubuntu
       apt:
-        name: {{mywebpackforununtu}}
+        name: "{{mywebpackforununtu}}"
         state: present
       when: ansible_os_family == "Debian" 
     
     - name : Install httpd on Redhat
       yum:
-        name: {{mywebpackforredhat}}
+        name: "{{mywebpackforredhat}}"
         state: present
       when: ansible_os_family == "RedHat" 
 
