@@ -7,24 +7,26 @@
       apt:
          name: git 
          state: present
-      when: ansible_os_family == "Debian" 
    
     - name: Install tree
       apt:
         name: tree
         state: present
-      when: ansible_os_family == "Linux" 
 
     - name: Install wget 
       apt: 
         name: wget
         state: present
-      when: ansible_os_family == "Linux" 
 
-
-    - name : Install apache2
+    - name : Install apache2 on ubuntu
       apt:
-        name: apache2
+        name: {{mywebpackforununtu}}
         state: present
       when: ansible_os_family == "Debian" 
+    
+    - name : Install apache2 on Redhat
+      yum:
+        name: {{mywebpackforredhat}}
+        state: present
+      when: ansible_os_family == "Linux" 
 
