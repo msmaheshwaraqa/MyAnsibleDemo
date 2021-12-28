@@ -8,17 +8,36 @@
          name: git 
          state: present
       when: ansible_os_family == "Debian"
+
+    - name: Install git on Redhat
+      yum:
+         name: git 
+         state: present
+      when: ansible_os_family == "RedHat"
+
     - name: Install tree
       apt:
         name: tree
         state: present
       when: ansible_os_family == "Debian"  
 
+    - name: Install tree on redhat
+      yum:
+        name: tree
+        state: present
+      when: ansible_os_family == "RedHat"  
+
     - name: Install wget 
       apt: 
         name: wget
         state: present
       when: ansible_os_family == "Debian"  
+
+    - name: Install wget on redhat
+      yum: 
+        name: wget
+        state: present
+      when: ansible_os_family == "RedHat"  
 
     - name : Install apache2 on ubuntu
       apt:
