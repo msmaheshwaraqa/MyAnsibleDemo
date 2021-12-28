@@ -24,7 +24,7 @@
         state: present
       when: ansible_os_family == "Debian" 
     
-    - name : Install apache2 on Redhat
+    - name : Install httpd on Redhat
       yum:
         name: {{mywebpackforredhat}}
         state: present
