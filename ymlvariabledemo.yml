@@ -1,0 +1,12 @@
+--- 
+- hosts: mywebserver
+  become: yes
+  vars:
+      myvar1: git  
+
+  tasks:
+    - name: Install git 
+      apt: 
+        name: "{{myvar1:}}"
+        state: present
+      when: ansible_os_family == "Debian"  
