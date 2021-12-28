@@ -2,7 +2,9 @@
 - hosts: mywebserver
   become: yes
   vars:
-      myvar1: git  
+      myvar1: git 
+      myvar2: tree
+      myvar3: wget 
 
   tasks:
     - name: Install git 
