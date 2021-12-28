@@ -28,5 +28,5 @@
       yum:
         name: {{mywebpackforredhat}}
         state: present
-      when: ansible_os_family == "Linux" 
+      when: ansible_os_family == "RedHat" 
 
