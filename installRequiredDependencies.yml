@@ -1,5 +1,5 @@
 ---
-- hosts: myswebserver
+- hosts: mywebserver
   become: yes
   tasks: 
     - name: Install git 
