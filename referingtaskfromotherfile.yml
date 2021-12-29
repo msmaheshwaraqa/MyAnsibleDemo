@@ -10,4 +10,9 @@
   - name: copy from myindex.j2 to index.html
     template:
       src: myindex.j2
-      dest: /var/www/html/index.html     
+      dest: /var/www/html/index.html
+  - name:  I want to download file from internet
+    get_url:
+      url: https://get.jenkins.io/war-stable/2.319.1/jenkins.war
+      dest: /home/mahesh/jenkins.war
+      force_basic_auth: yes
