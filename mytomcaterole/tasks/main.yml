@@ -2,7 +2,7 @@
 # tasks file for mytomcaterole
 #- include_tasks: installJava.yml
 #- include_tasks: createnewtomcatgroup.yml
-- include_tasks: installtomcat.yml
-- include_tasks: updatepermissions.yml
+#- include_tasks: installtomcat.yml
+#- include_tasks: updatepermissions.yml
 - include_tasks: createsystemdservicefile.yml
 - include_tasks: starttomcat.yml 
