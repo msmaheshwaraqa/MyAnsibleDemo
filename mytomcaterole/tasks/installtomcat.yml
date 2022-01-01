@@ -1,0 +1,17 @@
+---
+- name: Download tomcat 8.5.5
+  get_url:
+    url: https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.5/bin/apache-tomcat-8.5.5.tar.gz
+    dest: /opt/mahesh/apache-tomcat-8.5.5.tar.gz
+    force_basic_auth: yes
+
+- name: Create the directory /opt/tomcat
+  file:
+    path: /opt/tomcat
+    state: directory
+
+- name: Extract apache-tomcat-8.5.5.tar.gz    
+  command: 
+    cmd: sudo tar xzvf /opt/mahesh/apache-tomcat-8*tar.gz -C /opt/tomcat --strip-components=1
+    creates: /opt/tomcat/LICENSE
+

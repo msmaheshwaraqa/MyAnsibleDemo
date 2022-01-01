@@ -1,0 +1,53 @@
+---
+- name: Update tomcat group ownership over the entire installation directory
+  file: 
+      path: /opt/tomcat
+      state: directory
+      recurse: yes
+      group: tomcat
+
+- name: Update tomcat group read access to the conf directory and all of its contents      
+  file:
+    path: /opt/tomcat/conf
+    mode: g+r
+    state: directory
+    recurse: yes
+
+- name: Update execute access to the directory      
+  file:
+    path: /opt/tomcat/conf
+    mode: g+x
+    state: directory
+
+- name: update the owner of the webapps to tomcat
+  file:
+    path: /opt/tomcat/webapps/ 
+    owner: tomcat
+    recurse: yes
+    state: directory   
+
+- name: update the owner of the work to tomcat
+  file:
+    path: /opt/tomcat/work/ 
+    owner: tomcat
+    recurse: yes
+    state: directory   
+
+
+- name: update the owner of the temp to tomcat
+  file:
+    path: /opt/tomcat/temp/ 
+    owner: tomcat
+    recurse: yes
+    state: directory   
+
+
+- name: update the owner of the logs to tomcat
+  file:
+    path: /opt/tomcat/logs/ 
+    owner: tomcat
+    recurse: yes
+    state: directory   
+
+
+
