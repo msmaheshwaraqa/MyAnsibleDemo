@@ -12,7 +12,7 @@
 
 - name: Extract apache-tomcat-8.5.5.tar.gz    
   command: 
-    cmd: sudo tar xzvf /home/mahesh/apache-tomcat-8*tar.gz -C /opt/tomcat --strip-components=1
+    cmd: sudo tar xzvf /home/mahesh/apache-tomcat-8.5.5.tar.gz -C /opt/tomcat --strip-components=1
     creates: /opt/tomcat/LICENSE
 
 
