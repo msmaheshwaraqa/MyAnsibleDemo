@@ -4,7 +4,7 @@
   tasks:
     - name: create 2 ec2 instance
       ec2:
-         key_name: myec2nodesweb
+         key_name: myServer1
          instance_type: t2.micro
          image: ami-0a909ebade941fc2a
          wait: yes
