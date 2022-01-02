@@ -1,0 +1,17 @@
+---
+- hosts: localhost
+  become: yes
+  tasks:
+    - name: create 2 ec2 instance
+      ec2:
+         key_name: myec2nodesweb
+         instance_type: t2.micro
+         image: ami-0a909ebade941fc2a
+         wait: yes
+         group: webserver
+         count: 2
+         region: us-east-1
+         vpc_subnet_id: subnet-0b0f5c3503471aa09
+         assign_public_ip: yes
+         instance_tags:
+            Name: ansiblenodes
