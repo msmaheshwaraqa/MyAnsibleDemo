@@ -10,7 +10,7 @@
          wait: yes
          group: webserver
          count: 2
-         region: us-east-1
+         region: us-east-2
          vpc_subnet_id: subnet-0b0f5c3503471aa09
          assign_public_ip: yes
          instance_tags:
